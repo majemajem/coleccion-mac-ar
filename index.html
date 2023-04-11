@@ -24,7 +24,7 @@
         <a-asset-item id="fotos-juntas" src="public/modelo-ar-mac.gltf"></a-asset-item>
       </a-assets>
 
-      <a-camera position="0 0 0" look-controls="enabled: true" cursor="fuse: false; rayOrigin: mouse;" raycaster=" objects: .clickable"></a-camera>
+      <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
 
       <!-- <a-plane src="#card1" id="card1" class="clickable" scale="0.1 0.1 0.1" opacity="1" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>
       <a-plane src="#card2" class="clickable" opacity="1" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>
