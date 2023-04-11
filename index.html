@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: /mac-prueba1.mind; maxTrack: 1; filterMinCF: 0.0005; filterBeta: .1; warmupTolerance: 5; missTolerance: 7" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: public/mac-prueba1.mind; maxTrack: 1; filterMinCF: 0.0005; filterBeta: .1; warmupTolerance: 5; missTolerance: 7" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <!-- <img id="card1" src="/foto-1.jpg" />
         <img id="card2" src="/foto-2.jpg" />
@@ -20,8 +20,8 @@
         <img id="card8" src="/foto-8.jpg" />
         <img id="card9" src="/foto-9.jpg" />
         <img id="card10" src="/foto-10.jpg" /> -->
-        <img id="base" src="/base.jpg" />
-        <a-asset-item id="fotos-juntas" src="/modelo-ar-mac.gltf"></a-asset-item>
+        <img id="base" src="public/base.jpg" />
+        <a-asset-item id="fotos-juntas" src="public/modelo-ar-mac.gltf"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 1.3 3" look-controls="enabled: true" cursor="fuse: false; rayOrigin: mouse;" raycaster=" objects: .clickable"></a-camera>
