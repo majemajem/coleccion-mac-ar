@@ -1,0 +1,15 @@
+/* .modelo {
+    animation: fadeInAnimation cubic-bezier(0.6, 0.04, 0.25, 1) 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  } */
