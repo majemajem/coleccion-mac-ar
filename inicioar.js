@@ -1,7 +1,34 @@
 // detect click event
-const examplePlane = document.querySelector('#model07');
+const oeEscuchame = document.querySelector('#oe-escuchame');
+const segundaOpcion = document.querySelector('#segunda-opcion');
+// falta implementar doble reconocimiento con .innerHTML
 const afiches = document.querySelectorAll('.afiche');
 const body = document.getElementsByTagName("BODY")[0];
+const sceneEl = document.querySelector('a-scene');
+const arSystem = sceneEl.systems["mindar-image-system"];
+
+// INICIO
+body.onload = inicioTransparente();
+
+oeEscuchame.addEventListener("targetFound", () => {
+  animacionInicial();
+  animacionCompleta();
+});
+
+oeEscuchame.addEventListener("targetLost", () => {
+  inicioTransparente();
+  antiAnimacion();
+  afiches.forEach((afiche) => {
+    console.log(afiche.getAttribute('material.opacity'));
+  })
+})
+
+// FUNCIONES
+function inicioTransparente(){
+  afiches.forEach((afiche) => {
+    afiche.setAttribute('material.opacity', '0.0');
+  });
+};
 
 function animacionInicial() {
   afiches.forEach((afiche) => {
@@ -12,11 +39,34 @@ function animacionInicial() {
       'easing': 'linear',
       'dur': 2500,
       'loop': 1});
-  })
-}
+  });
+};
 
-body.onload = animacionInicial();
+function antiAnimacion() {
+  afiches.forEach((afiche) => {
+    afiche.setAttribute('animation', {
+      'property': 'material.opacity', 
+      'from': 1.0,
+      'to': 0.0,
+      'easing': 'linear',
+      'dur': 500,
+      'loop': 1});
+  });
+};
 
+
+function animacionCompleta(){ // so far no funciona
+  oeEscuchame.setAttribute('animation', {
+    'property': 'scale',
+    'from': {x: 0.5, y: 0.5, z: 0.5},
+    'to': {x: 1, y: 1, z: 1},
+    'easing': 'easeInQuad',
+    'dur': 2500,
+    'loop': 1
+  });
+};
+
+// CLICKS EN AFICHES -- MODIFICAR
 afiches.forEach((afiche) => {
   let contador = 0;
   afiche.addEventListener('click', () => {
@@ -42,12 +92,13 @@ afiches.forEach((afiche) => {
     );
       contador = 0;
     }
-    console.log(contador);
+    // console.log(contador);
   })
 });
 
-console.log(afiches);
+// console.log(afiches);
 
+// componente inútil ↓
 AFRAME.registerComponent('model-opacity', {
   schema: {default: 1.0},
   init: function () {

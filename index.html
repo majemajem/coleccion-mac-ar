@@ -5,11 +5,13 @@
         <!-- <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.1/dist/mindar-image.prod.js"></script> -->
         <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
+        <script src="/aframe-keyframes-component.min.js"></script>
         <!-- <script src='https://cdn.jsdelivr.net/npm/webvr-polyfill@latest/build/webvr-polyfill.js'></script> -->
         <link rel="stylesheet" href="style.css" type="text/css">
     </head>
     <body>
-        <a-scene mindar-image="imageTargetSrc: public/all-possible-targets.mind; maxTrack: 1; filterMinCF: 0.0005; filterBeta: .1; warmupTolerance: 5; missTolerance: 7" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+        <a-scene mindar-image="imageTargetSrc: public/all-possible-targets.mind; maxTrack: 1; filterMinCF: 0.0005; filterBeta: 0.05; warmupTolerance: 5; missTolerance: 5" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+            <!-- filterMinCF: 0.0005; filterBeta: .1; warmupTolerance: 5; missTolerance: 7 -->
             <a-assets>
               <img id="card1" src="public/afiches/foto-1.jpg" />
               <img id="card2" src="public/afiches/foto-2.jpg" />
@@ -26,19 +28,22 @@
 
             <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
 
-            <a-entity mindar-image-target="targetIndex: 0" scale="0.3 0.3 0.3" position="0 -0.5 1">
-                <a-plane src="#card1" id="model01" class="clickable afiche" position="-0.55 3.3 0" height="0.44" width="0.74" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card2" class="clickable afiche" position="-0.45 2.6 0" height="0.92" width="0.52" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card3" class="clickable afiche" position="0.29 2.9 0" height="1" width="0.92" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card4" class="clickable afiche" position="-0.54 1.76 0" height="0.70" width="0.37" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card5" id="model05" class="clickable afiche" position="0.57 1.97 0" height="0.80" width="0.65" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card6" class="clickable afiche" position="-0.49 1.01 0" height="0.66" width="0.4" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card7" id="model07" class="clickable afiche" position="0.31 0.75 0" height="1.5" width="1.18" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card8" class="clickable afiche" position="-0.62 0.18 0" height="0.88" width="0.6" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card9" class="clickable afiche" position="0.04 -0.24 0" height="0.42" width="0.7" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card10" class="clickable afiche" position="0.76 -0.2 0" height="0.36" width="0.26" rotation="0 0 0" ></a-plane>
+            <a-entity mindar-image-target="targetIndex: 6" id="oe-escuchame">
+                <a-plane src="#card1" id="model01" class="clickable afiche" position="-0.275 1.05 0" height="0.22" width="0.37" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card2" class="clickable afiche" position="-0.225 0.7 0" height="0.46" width="0.26" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card3" class="clickable afiche" position="0.145 0.85 0" height="0.5" width="0.46" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card4" class="clickable afiche" position="-0.27 0.285 0" height="0.35" width="0.185" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card5" id="model05" class="clickable afiche" position="0.285 0.385 0" height="0.4" width="0.325" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card6" class="clickable afiche" position="-0.245 -0.095 0" height="0.33" width="0.2" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card7" id="model07" class="clickable afiche" position="0.155 -0.225 0" height="0.75" width="0.59" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card8" class="clickable afiche" position="-0.31 -0.51 0" height="0.44" width="0.3" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card9" class="clickable afiche" position="0.02 -0.72 0" height="0.21" width="0.35" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card10" class="clickable afiche" position="0.38 -0.7 0" height="0.18" width="0.13" rotation="0 0 0" ></a-plane>
 
-                <a-plane src="#base" position="0 1.5 -1" height="2" width="2" rotation="0 0 0"></a-plane>
+                <!-- <a-plane src="#base" position="-0.1 0 -0.5" height="1" width="1" rotation="0 0 0"></a-plane> -->
+            </a-entity>
+            <a-entity mindar-image-target="targetIndex: 8" id="segunda-opcion">
+
             </a-entity>
 
             <script  src="/inicioar.js" defer></script>
