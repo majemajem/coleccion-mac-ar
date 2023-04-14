@@ -24,9 +24,9 @@
               <img id="base" src="public/base.jpg" />
             </a-assets>
 
-            <a-camera position="0 0 2" look-controls="enabled: true" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
+            <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
 
-            <a-entity mindar-image-target="targetIndex: 0" scale="0.7 0.7 0.7" position="0 -1 0">
+            <a-entity mindar-image-target="targetIndex: 0" scale="0.6 0.6 0.6" position="0 -1 0">
                 <a-plane src="#card1" id="model01" class="clickable afiche" position="-0.55 3.8 0" height="0.44" width="0.74" rotation="0 0 0" animation="property: material.opacity; from: 0.0; to: 1.0; easing: linear; dur: 2500; loop: 1;"></a-plane>
                 <a-plane src="#card2" class="clickable afiche" position="-0.45 3.1 0" height="0.92" width="0.52" rotation="0 0 0" animation="property: material.opacity; from: 0.0; to: 1.0; easing: linear; dur: 2500; loop: 1;"></a-plane>
                 <a-plane src="#card3" class="clickable afiche" position="0.29 3.4 0" height="1" width="0.92" rotation="0 0 0" animation="property: material.opacity; from: 0.0; to: 1.0; easing: linear; dur: 2500; loop: 1;"></a-plane>

@@ -28,7 +28,7 @@ afiches.forEach((afiche) => {
     }
     console.log(contador);
   })
-})
+});
 
 console.log(afiches);
 
