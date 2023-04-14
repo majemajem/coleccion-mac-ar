@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.1/dist/mindar-image.prod.js"></script> -->
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script> -->
+    <!-- <script src='https://cdn.jsdelivr.net/npm/webvr-polyfill@latest/build/webvr-polyfill.js'></script> -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+    <a-scene  color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+        <img id="base" src="public/base-mod.jpg" />
+        <a-asset-item id="fotos-juntas" src="public/modelo-ar-mac.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-camera position="0 0 3" look-controls="enabled: true" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
+
+      <a-entity material="transparent: true" animation="property: material.opacity; from: 0.0; to: 1.0; easing: linear; dur: 5000; loop: 1;">
+        <!-- <a-animation attribute="model-opacity"
+               dur="10000" raycaster="far: ${customFields.libVersion}";
+               from="1"
+               to="0"
+               repeat="indefinite"></a-animation> -->
+        <!-- mindar-image-target="targetIndex: 0" -->
+        <a-plane src="#base" position="0 -0.3 0" height="1" width="1" rotation="0 0 0"  ></a-plane>
+
+        <!-- <a-gltf-model class="clickable modelo" id="pruebita" rotation="0 -90 0" position="0 -1.5 1" scale="0.6 0.6 0.6" src="#fotos-juntas"  
+          animation__mouseenter="property: rotation; to: 0 270 0; easing: linear; dur: 1000; startEvents: mouseenter;"
+          animation__mouseleave="property: rotation; to: 0 270 0; easing: linear; dur: 1000; startEvents: mouseleave;"></a-gltf-model> -->
+      </a-entity>
+
+      <!-- <a-entity 
+      class="clickable"
+      id="model01" 
+      gltf-model="#fotos-juntas" 
+      rotation="0 -90 0" position="0 -1.5 1" scale="0.6 0.6 0.6"
+      material="transparent: true, alphaTest: 0.5;"
+      shadow="receive: true"
+      animation="property: model-opacity; dur: 10000; from 0.0; to 1.0; loop: 1; easing: linear;"
+      > -->
+      <!-- model-opacity animation__1="property: model-opacity.opacity;from: 1; to: 0; delay: 5000; dur: 2500; loop: false; dir: forward; startEvents: model-loaded'   animation__2='property: model-opacity.opacity;from: 0; to: 1; delay: 10000; dur: 2500; loop: false; dir: forward; startEvents: model-loaded" -->
+    <!-- </a-entity> -->
+    </a-scene>
+
+    <script type="module" src="/inicioar.js"></script>
+  </body>
+</html>
+
+<!-- mindar-image="imageTargetSrc: public/pruebamacro-1.mind; maxTrack: 1; filterMinCF: 0.0005; filterBeta: .1; warmupTolerance: 5; missTolerance: 7" -->
+
+<!-- <div id="example-scanning-overlay" class="hidden">
+  <div class="inner">
+<img src="./assets/card-example/card.png">
+<div class="scanline"></div>
+  </div>
+</div> -->
+
+<!-- Para cuando quieras implementar un scanning overlay específico (con imagen propia y todo). Se pone ANTES del a-scene-->
