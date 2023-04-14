@@ -5,6 +5,7 @@ const afiches = document.querySelectorAll('.afiche');
 afiches.forEach((afiche) => {
   let contador = 0;
   afiche.addEventListener('click', () => {
+    let beamos = afiche.getAttribute('id');
     if (contador == 0) {
       afiche.setAttribute('animation__2', {'property': 'rotation',
       'from': {x: 0, y: 0, z: 0},
