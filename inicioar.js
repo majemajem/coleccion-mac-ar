@@ -1,6 +1,21 @@
 // detect click event
 const examplePlane = document.querySelector('#model07');
 const afiches = document.querySelectorAll('.afiche');
+const body = document.getElementsByTagName("BODY")[0];
+
+function animacionInicial() {
+  afiches.forEach((afiche) => {
+    afiche.setAttribute('animation', {
+      'property': 'material.opacity', 
+      'from': 0.0,
+      'to': 1.0,
+      'easing': 'linear',
+      'dur': 2500,
+      'loop': 1});
+  })
+}
+
+body.onload = animacionInicial();
 
 afiches.forEach((afiche) => {
   let contador = 0;
