@@ -27,14 +27,16 @@ oeEscuchame.addEventListener("targetLost", () => {
 // FUNCIONES
 function inicioTransparente(){
   afiches.forEach((afiche) => {
-    afiche.setAttribute('material.opacity', '0.0');
+    afiche.setAttribute('opacity', '0.0');
+    afiche.setAttribute('visible', 'false');
   });
 };
 
 function animacionInicial() {
   afiches.forEach((afiche) => {
+    afiche.setAttribute('visible', 'true');
     afiche.setAttribute('animation', {
-      'property': 'material.opacity', 
+      'property': 'opacity', 
       'from': 0.0,
       'to': 1.0,
       'easing': 'linear',
