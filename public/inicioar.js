@@ -77,7 +77,6 @@ function inicioTransparente(){
 
 function animacionInicial() {
   afiches.forEach((afiche) => {
-    afiche.setAttribute('autoplay', 'true');
     afiche.setAttribute('visible', 'true');
     afiche.setAttribute('animation', {
       'property': 'opacity', 
