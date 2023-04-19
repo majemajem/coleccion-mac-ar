@@ -13,32 +13,34 @@
         <a-scene mindar-image="imageTargetSrc: public/all-possible-targets.mind; maxTrack: 1; filterMinCF: 0.0005; filterBeta: 0.05; warmupTolerance: 5; missTolerance: 5" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
             <!-- filterMinCF: 0.0005; filterBeta: .1; warmupTolerance: 5; missTolerance: 7 -->
             <a-assets>
-              <img id="card1" src="public/afiches/foto-1.jpg" />
-              <img id="card2" src="public/afiches/foto-2.jpg" />
-              <img id="card3" src="public/afiches/foto-3.jpg" />
-              <img id="card4" src="public/afiches/foto-4.jpg" />
-              <img id="card5" src="public/afiches/foto-5.jpg" />
-              <img id="card6" src="public/afiches/foto-6.jpg" />
-              <img id="card7" src="public/afiches/foto-7.jpg" />
-              <img id="card8" src="public/afiches/foto-8.jpg" />
-              <img id="card9" src="public/afiches/foto-9.jpg" />
-              <img id="card10" src="public/afiches/foto-10.jpg" />
-              <img id="base" src="public/base.jpg" />
+                <img id="card1" src="public/afiches/foto-3.jpg" />
+                <img id="card2" src="public/afiches/foto-2.jpg" />
+                <img id="card3" src="public/afiches/foto-4.jpg" />
+                <img id="card4" src="public/afiches/foto-5.jpg" />
+                <img id="card5" src="public/afiches/ult-5.jpg"/>
+                <img id="card6" src="public/afiches/foto-1.jpg" />
+                <img id="card7" src="public/afiches/foto-6.jpg" />
+                <img id="card8" src="public/afiches/foto-7.jpg" />
+                <img id="card9" src="public/afiches/foto-8.jpg" />
+                <img id="card10" src="public/afiches/foto-9.jpg" />
+                <img id="card11" src="public/afiches/foto-10.jpg" />
+                <img id="base" src="public/base.jpg" />
             </a-assets>
 
             <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
 
             <a-entity mindar-image-target="targetIndex: 6" id="oe-escuchame">
-                <a-plane src="#card1" id="model01" class="clickable afiche" position="-0.275 1.05 0" height="0.22" width="0.37" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card2" class="clickable afiche" position="-0.225 0.7 0" height="0.46" width="0.26" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card3" class="clickable afiche" position="0.145 0.85 0" height="0.5" width="0.46" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card4" class="clickable afiche" position="-0.27 0.285 0" height="0.35" width="0.185" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card5" id="model05" class="clickable afiche" position="0.285 0.385 0" height="0.4" width="0.325" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card6" class="clickable afiche" position="-0.245 -0.095 0" height="0.33" width="0.2" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card7" id="model07" class="clickable afiche" position="0.155 -0.225 0" height="0.75" width="0.59" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card8" class="clickable afiche" position="-0.31 -0.51 0" height="0.44" width="0.3" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card9" class="clickable afiche" position="0.02 -0.72 0" height="0.21" width="0.35" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card10" class="clickable afiche" position="0.38 -0.7 0" height="0.18" width="0.13" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card1" class="afiche" position="-0.41 2.96 0" height="1" width="0.92" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card2" class="afiche" position="0.4 3.05 0" height="1.18" width="0.68" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card3" class="afiche" position="-0.62 1.79 0" height="0.70" width="0.46" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card4" class="afiche" position="0.01 2 0" height="0.86" width="0.703" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card5" class="afiche" position="0.63 2.25 0" height="0.40" width="0.48" rotation="0 0 0"></a-plane>
+                <a-plane src="#card6" class="afiche" position="0.68 1.86 0" height="0.34" width="0.56" rotation="0 0 0"></a-plane>
+                <a-plane src="#card7" class="afiche" position="-0.56 1.04 0" height="0.66" width="0.4" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card8" id="model08" class="afiche clickable af-link" position="0.24 0.8 0" height="1.5" width="1.18" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card9" class="afiche" position="-0.66 0.25 0" height="0.88" width="0.6" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card10" class="afiche" position="0.17 -0.18 0" height="0.42" width="0.72" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card11" class="afiche" position="0.68 -0.15 0" height="0.36" width="0.26" rotation="0 0 0" ></a-plane>
 
                 <!-- <a-plane src="#base" position="-0.1 0 -0.5" height="1" width="1" rotation="0 0 0"></a-plane> -->
             </a-entity>

@@ -9,6 +9,7 @@ const arSystem = sceneEl.systems["mindar-image-system"];
 
 // INICIO
 body.onload = inicioTransparente();
+// animacionInicial();
 
 oeEscuchame.addEventListener("targetFound", () => {
   animacionInicial();
