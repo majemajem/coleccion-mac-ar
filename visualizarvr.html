@@ -6,6 +6,7 @@
         <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script> -->
         <!-- <script src='https://cdn.jsdelivr.net/npm/webvr-polyfill@latest/build/webvr-polyfill.js'></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
         <link rel="stylesheet" href="style.css" type="text/css">
     </head>
     <body>
@@ -28,20 +29,20 @@
 
             <a-camera position="0 0 1" look-controls="enabled: true" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
 
-            <a-entity   id="oe-escuchame">
+            <a-entity id="oe-escuchame">
                 <!-- scale="0.2 0.2 0.2" position="0 -0.5 1" -->
                 <!-- mindar-image-target="targetIndex: 0" -->
-                <a-plane src="#card1" class="afiche" position="-0.205 0.88 0" height="0.5" width="0.46" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card2" class="afiche" position="0.2 0.925 0" height="0.59" width="0.34" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card3" class="afiche" position="-0.31 0.29 0" height="0.4" width="0.26" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card4" class="afiche" position="0.005 0.4 0" height="0.44" width="0.36" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card5" class="afiche" position="0.31 0.52 0" height="0.2" width="0.24" rotation="0 0 0"></a-plane>
-                <a-plane src="#card6" class="afiche" position="0.33 0.33 0" height="0.17" width="0.28" rotation="0 0 0"></a-plane>
-                <a-plane src="#card7" class="afiche" position="-0.28 -0.08 0" height="0.33" width="0.2" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card1" id="model01" class="afiche" position="-0.205 0.88 0" height="0.5" width="0.46" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card2" id="model02" class="afiche" position="0.2 0.925 0" height="0.59" width="0.34" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card3" id="model03" class="afiche" position="-0.31 0.29 0" height="0.4" width="0.26" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card4" id="model04" class="afiche" position="0.005 0.4 0" height="0.44" width="0.36" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card5" id="model05" class="afiche" position="0.31 0.52 0" height="0.2" width="0.24" rotation="0 0 0"></a-plane>
+                <a-plane src="#card6" id="model06" class="afiche" position="0.33 0.33 0" height="0.17" width="0.28" rotation="0 0 0"></a-plane>
+                <a-plane src="#card7" id="model07" class="afiche" position="-0.28 -0.08 0" height="0.33" width="0.2" rotation="0 0 0" ></a-plane>
                 <a-plane src="#card8" id="model08" class="afiche clickable af-link" position="0.12 -0.2 0" height="0.75" width="0.59" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card9" class="afiche" position="-0.33 -0.47 0" height="0.44" width="0.3" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card10" class="afiche" position="0.1 -0.685 0" height="0.21" width="0.36" rotation="0 0 0" ></a-plane>
-                <a-plane src="#card11" class="afiche" position="0.35 -0.67 0" height="0.18" width="0.13" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card9" id="model09" class="afiche" position="-0.33 -0.47 0" height="0.44" width="0.3" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card10" id="model10" class="afiche" position="0.1 -0.685 0" height="0.21" width="0.36" rotation="0 0 0" ></a-plane>
+                <a-plane src="#card11" id="model11" class="afiche" position="0.35 -0.67 0" height="0.18" width="0.13" rotation="0 0 0" ></a-plane>
 
                 <a-plane src="#base" position="0 1.5 -1" height="2" width="2" rotation="0 0 0"></a-plane>
             </a-entity>
