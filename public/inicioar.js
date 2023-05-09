@@ -53,8 +53,8 @@ body.onload = inicioTransparente();
 // animacionIdle();
 afiches.forEach((afiche, i) => {
   let current = posicionesDeAnimacion[i];
-    let durVaried = 1500 + i*50;
-    let prueba = anime({
+  let durVaried = 1500 + i*50;
+  let prueba = anime({
     targets: `#${afiche.id}`,
     rotation: [
       {value: `${current.x} ${current.y} ${current.z}`, duration: durVaried},
@@ -64,8 +64,8 @@ afiches.forEach((afiche, i) => {
     easing: 'easeInOutQuad',
     loop: true,
     autoplay: false
-    });
-    animacioncita.push(prueba);
+  });
+  animacioncita.push(prueba);
 });
 
 console.log(animacioncita[1].autoplay);
@@ -94,6 +94,12 @@ enlacePdf.addEventListener("touchstart", () => {
 // FUNCIONES
 function inicioTransparente(){
   afiches.forEach((afiche, i) => {
+    afiche.setAttribute('side', 'double');
+    afiche.setAttribute('shader', 'standard');
+    afiche.setAttribute('roughness', '0.38');
+    afiche.setAttribute('metalness', '0.63');
+    afiche.setAttribute('color', '#F00');
+    afiche.setAttribute('fog', 'false');
     // afiche.setAttribute('opacity', '0.0');
     // afiche.setAttribute('visible', 'false');
     afiche.setAttribute('height', escalasPartida[i].height);
@@ -105,13 +111,6 @@ function inicioTransparente(){
 function animacionInicial() {
   afiches.forEach((afiche, i) => {
     afiche.setAttribute('visible', 'true');
-    // afiche.setAttribute('animation', {
-    //   'property': 'opacity', 
-    //   'from': 0.0,
-    //   'to': 1.0,
-    //   'easing': 'linear',
-    //   'dur': 500,
-    //   'loop': 1});
     afiche.setAttribute('animation__2', {
       'property': 'position',
       'from': posPartida[i],
@@ -166,18 +165,3 @@ function antiAnimacion() {
 
   });
 };
-
-// so far no funciona
-// function animacionCompleta(){
-//   oeEscuchame.setAttribute('animation', {
-//     'property': 'scale',
-//     'from': {x: 0.5, y: 0.5, z: 0.5},
-//     'to': {x: 1, y: 1, z: 1},
-//     'easing': 'easeInQuad',
-//     'dur': 5000,
-//     'loop': 1
-//   });
-// };
-
-
-// console.log(afiches);
